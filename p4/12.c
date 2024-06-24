@@ -8,7 +8,7 @@ void main() {
     printf("%d ", a);
     if(n > 1) printf("%d ", b);
 
-    for(i = 2; i <= n; i++) {
+    for(i = 3; i <= n; i++) {
         c = a + b;
         printf("%d ", c);
         a = b;
