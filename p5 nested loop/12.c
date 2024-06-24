@@ -1,33 +1,45 @@
-  #include <stdio.h>
- int main()
- { 
-    system("color 0f4");
-    int n;
-    scanf("%d",&n);
-    for(int row=1;row<=n;row++)
-    {
-        for(int col=1;col<=n-row;col++)
-        {
+#include <stdio.h>
+
+int main() {
+    int n, i, j, space;
+    scanf("%d", &n);
+
+    
+    
+
+    // Calculate the number of spaces before the asterisks start
+    space = n / 2;
+
+    // Print the upper part of the pattern
+    for (i = 1; i <= n; i += 2) {
+        // Print leading spaces
+        for (j = 0; j < space; j++) {
             printf("_");
         }
-        for(int j=1;j<2*row;j++)
-        {
+        // Print asterisks
+        for (j = 0; j < i; j++) {
             printf("*");
-           
         }
         printf("\n");
+        space--; // Decrease the space count for the next row
     }
-    for (int row=n-1;row>=1;row--)
-    {
-        for(int col=1;col<=n-row;col++)
-        {
+
+    // Reset the space count for the lower part of the pattern
+    space = 1;
+
+    // Print the lower part of the pattern
+    for (i = n - 2; i > 0; i -= 2) {
+        // Print leading spaces
+        for (j = 0; j < space; j++) {
             printf("_");
         }
-        for(int j=1;j<2*row;j++)
-        {
+        // Print asterisks
+        for (j = 0; j < i; j++) {
             printf("*");
-           
         }
         printf("\n");
+        space++; // Increase the space count for the next row
     }
- }
+
+    return 0;
+}
