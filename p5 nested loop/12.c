@@ -3,6 +3,13 @@
 int main() {
     int n, i, j, space;
     scanf("%d", &n);
+<<<<<<< HEAD
+=======
+
+    
+    
+
+>>>>>>> 8dc9154a52cdb342dde0a636c36959a68fa8c4ab
     // Calculate the number of spaces before the asterisks start
     space = n / 2;
 
