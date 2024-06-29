@@ -1,5 +1,5 @@
 #include <stdio.h>
-int main()
+void main()
 {
     system("color 00b4");
     int n;

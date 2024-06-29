@@ -5,9 +5,10 @@ int main() {
     printf("Enter the number of students: ");
     scanf("%d", &n);
 
-    for (int student = 0; student < n; student++) {
+    for (int s
+    = 0; s < n; s++) {
         double A, HW, CT, MT, TF;
-        printf("Enter marks for student %d (A, HW, CT, MT, TF): ", student + 1);
+       
         scanf("%lf %lf %lf %lf %lf", &A, &HW, &CT, &MT, &TF);
 
         
@@ -29,7 +30,7 @@ int main() {
         else grade = 'F';
 
         
-        printf("Student %d: %c\n", student + 1, grade);
+        printf("Student %d: %c\n", s + 1, grade);
     }
 
     return 0;

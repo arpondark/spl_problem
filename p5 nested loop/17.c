@@ -3,7 +3,7 @@
 int main ()
 {
     system("color 1F");
-    int n,i,j,k,m,o;
+    int n,i,j,k,m;
     
     scanf("%d",&n);
     k = n/2;

@@ -11,7 +11,7 @@ void main() {
         scanf("%d", &guess);
 
         if (guess == X) {
-            printf("Right Player-2 wins!\n");
+            printf("Right ,Player-2 wins!\n");
             return 0;
         } else {
             printf("Wrong %d Choice(s) Left!\n", N - i - 1);

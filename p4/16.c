@@ -4,7 +4,7 @@ int main() {
     int a, b, originalA, originalB, gcd, lcm ;
 
     // Input two positive integers
-    printf("Enter two positive integers: ");
+    
     scanf("%d %d", &a, &b);
 
     originalA = a;

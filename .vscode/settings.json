@@ -58,5 +58,7 @@
   "C_Cpp_Runner.msvcSecureNoWarnings": false,
   "files.associations": {
     "stdio.h": "c"
-  }
+  },
+  "code-runner.clearPreviousOutput": false,
+  "code-runner.runInTerminal": true
 }

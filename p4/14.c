@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 int main() {
-    int n, r;
-    unsigned long long nFact = 1, rFact = 1, nrFact = 1;
+    int n, r,nFact = 1, rFact = 1, nrFact = 1;
+     
     scanf("%d %d", &n, &r);
     // Calculate n!
     for (int i = 1; i <= n; i++) {
@@ -20,10 +20,10 @@ int main() {
     }
 
     // Calculate nCr
-    unsigned long long nCr = nFact / (rFact * nrFact);
+    int nCr = nFact / (rFact * nrFact);
 
     
-    printf("%llu\n", nCr);
+    printf("%d\n", nCr);
 
     
 }

@@ -1,22 +1,19 @@
 #include <stdio.h>
-void main()
-{
-    int x,y;
-    scanf("%d %d",&x,&y);
-    if(x!=y)
-    {
-        for(int i=1;i<=x;i++)
-        {
-            printf("%d,",x*x);
-            x--;
-            if(x*x==y*y)
-            {
-                printf("Reached!");
-            }
-            
+
+int main() {
+    int X, Y;
+    printf("Enter two numbers X and Y: ");
+    scanf("%d %d", &X, &Y);
+
+    while(X != Y) {
+        printf("%d, ", X * X);
+        if(X < Y) {
+            X++;
+        } else {
+            X--;
         }
     }
-    else{
-        printf("Reached!");
-    }
+    printf("Reached!\n");
+
+    return 0;
 }

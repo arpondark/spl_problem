@@ -1,16 +1,15 @@
 #include <stdio.h>
 
-void main() {
+void main() 
+{
     int number;
     while(1)
     {
-
-    
     printf("Enter a number: ");
     scanf("%d", &number);
     
     if(number <= 1) {
-        printf("%d is not a prime number.\n", number);
+        printf("Not  prime .\n");
     } else {
         int isPrime = 1;
         for(int i = 2; i <= number/2; i++) {
