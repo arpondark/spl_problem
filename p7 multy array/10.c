@@ -1,39 +1,46 @@
-#include <stdio.h>
+#include<stdio.h>
 
-int main() {
+int main(){
+
     int n;
-    printf("Enter the size of the matrix (odd number): ");
-    scanf("%d", &n);
-
-    int matrix[n][n];
-
-    printf("Enter the elements of the matrix:\n");
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            scanf("%d", &matrix[i][j]);
-        }
-    }
+    scanf("%d" , &n);
 
     int sum = 0;
-    int mid = (n / 2) +1;
+    int  k = (n/2)+1;
 
-    for (int i = 0; i < n; i++) {
-        // Main diagonal
-        sum += matrix[i][i];
-        // Secondary diagonal
-        sum += matrix[i][n-1-i];
-        // Middle row and middle column, avoiding double-counting the diagonals
-        if (i != mid) {
-            sum += matrix[mid][i];
-            sum += matrix[mid][i];
-           
+    int max[n][n];
+
+    for(int i=1 ; i<=n;i++){
+        for(int j=1 ; j<=n ; j++){
+            scanf("%d" ,&max[i][j]);
         }
     }
 
-    // The center element has been added twice, so subtract it once
-    sum -= matrix[mid][mid];
+    for(int i=1 ; i<=n;i++){
+        for(int j=1 ; j<=n ; j++){
 
-    printf("Sum of the highlighted positions: %d\n", sum);
+            if(i==1 && j<k){
+                sum += max[i][j];
+            }
+            if((i<k && j==k) || (i<k && j==n)){
+                sum += max[i][j];
+            }
+            if(i==k && j<=n){
+                  sum += max[i][j];
+            }
+            if((i>k && j==1) || (i>k && j==k)){
+                sum += max[i][j];
+            }
+            
+            if(i==n && j>k){
+                sum += max[i][j];
+            }
+            
+    }
+    
 
-    return 0;
+
+}
+printf("sum=%d" , sum);
+
 }
