@@ -40,6 +40,12 @@ int main(){
     
 
 
+<<<<<<< HEAD
+=======
+}
+printf("sum=%d" , sum);
+
+>>>>>>> ecd541a9735b1b95f21d69c008f9130d6fa0fe6e
 }
 printf("sum=%d" , sum);
 

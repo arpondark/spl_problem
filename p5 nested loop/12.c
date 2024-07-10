@@ -3,7 +3,11 @@
 int main() {
     int n, i, j, space;
     scanf("%d", &n);
+<<<<<<< HEAD
     // Calculate the number of spaces before the asterisks start
+=======
+
+>>>>>>> ecd541a9735b1b95f21d69c008f9130d6fa0fe6e
     space = n / 2;
 
     // Print the upper part of the pattern
