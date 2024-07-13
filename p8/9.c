@@ -1,20 +1,26 @@
 #include <stdio.h>
 
 int main() {
-    char str[1000];
-    char target;
-    gets(str);
-    scanf(" %c",target);
-    int count = 0, i = 0;
+    char str[100];
+    char ch;
+    int count = 0;
 
-    while (str[i] != '\0') {
-        if (str[i] == target || str[i] == target - 'a' + 'A' || str[i] == target - 'A' + 'a') {
+    // Getting input from user
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+
+    printf("Enter a character to count: ");
+    scanf(" %c", &ch);
+
+    // Counting occurrences
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (str[i] == ch || str[i] == ch + ('A' - 'a') || str[i] == ch - ('A' - 'a')) {
             count++;
         }
-        i++;
     }
 
-    printf("Number of occurrences of '%c': %d\n", target, count);
+    // Printing the result
+    printf("The character '%c' occurs %d times in the string.\n", ch, count);
 
     return 0;
 }
